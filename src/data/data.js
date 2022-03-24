@@ -1,7 +1,11 @@
-export const features = [
+import iconChat from "../assets/icon-chat.png";
+import iconMoney from "../assets/icon-money.png";
+import iconSecurity from "../assets/icon-security.png";
+
+export const featureData = [
   {
     id: "feature1",
-    imgSrc: "icon-chat.png",
+    imgSrc: iconChat,
     imgAlt: "Chat Icon",
     title: "You are our #1 priority",
     description:
@@ -9,7 +13,7 @@ export const features = [
   },
   {
     id: "feature2",
-    imgSrc: "icon-money.png",
+    imgSrc: iconMoney,
     imgAlt: "Chat Icon",
     title: "More savings means higher rates",
     description:
@@ -17,7 +21,7 @@ export const features = [
   },
   {
     id: "feature3",
-    imgSrc: "icon-security.png",
+    imgSrc: iconSecurity,
     imgAlt: "Chat Icon",
     title: "Security you can trust",
     description:
