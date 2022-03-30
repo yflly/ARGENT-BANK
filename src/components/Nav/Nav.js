@@ -15,7 +15,7 @@ export default function Nav() {
 
   return (
     <nav className="main-nav">
-      <Link className="main-nav-logo" href="./">
+      <Link to="/">
         <img
           className="main-nav-logo-image"
           src={argentBankLogo}
@@ -24,19 +24,19 @@ export default function Nav() {
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
       {token ? (
-        <div>
-          <Link className="main-nav-item" href="./login">
-            <i className="fa fa-user-circle"></i>
-            Sign In
-          </Link>
-        </div>
-      ) : (
         <div className="main-nav-logout">
           <span className="fas fa-user main-nav-user"></span>
           <span className="main-nav-name">[USER NAME]</span>
-          <Link className="main-nav-item" to="/" onClick={logout}>
+          <Link to="/" onClick={logout}>
             <span className="fas fa-sign-out-alt main-nav-out"></span>
             Sign out
+          </Link>
+        </div>
+      ) : (
+        <div>
+          <Link to="/login">
+            <i className="fa fa-user-circle"></i>
+            Sign In
           </Link>
         </div>
       )}
