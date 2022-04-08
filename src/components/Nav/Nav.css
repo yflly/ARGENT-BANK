@@ -17,10 +17,7 @@
 .main-nav-item {
   text-decoration: none;
   margin-right: 0.5rem;
-}
-
-.main-nav-item:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 .main-nav-logo {
@@ -31,4 +28,9 @@
 .main-nav-logo-image {
   max-width: 100%;
   width: 200px;
+}
+
+.fa-user-circle,
+.fa-sign-out {
+  padding-right: 7px;
 }
