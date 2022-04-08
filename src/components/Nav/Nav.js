@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 import argentBankLogo from "../../assets/argentBankLogo.png";
 import { setEmail, setToken } from "../../utils/reducers";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, connect } from "react-redux";
 
-export default function Nav() {
+function Nav(props) {
   const token = useSelector((state) => state.user.token);
   const dispatch = useDispatch();
   const logout = () => {
@@ -24,11 +24,11 @@ export default function Nav() {
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
       {token ? (
-        <div className="main-nav-logout">
-          <span className="fas fa-user main-nav-user"></span>
-          <span className="main-nav-name">[USER NAME]</span>
-          <Link to="/" onClick={logout}>
-            <span className="fas fa-sign-out-alt main-nav-out"></span>
+        <div className="main-nav-item">
+          <span className="fa fas fa-user-circle "></span>
+          <span className="main-nav-item">{props.user.firstName}</span>
+          <Link to="/" onClick={logout} className="main-nav-item">
+            <span className="fa fas fa-sign-out "></span>
             Sign out
           </Link>
         </div>
@@ -43,3 +43,12 @@ export default function Nav() {
     </nav>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    connected: state.user.connected,
+    user: state.user.user,
+  };
+};
+
+export default connect(mapStateToProps)(Nav);
