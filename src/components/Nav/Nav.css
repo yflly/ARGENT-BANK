@@ -8,6 +8,11 @@
 .main-nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
+}
+
+.main-nav a :hover {
+  text-decoration: underline;
 }
 
 .main-nav a.router-link-exact-active {
@@ -15,9 +20,10 @@
 }
 
 .main-nav-item {
-  text-decoration: none;
+  /*text-decoration: none;*/
   margin-right: 0.5rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .main-nav-logo {
