@@ -60,7 +60,7 @@ export default function FormLogin() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="inputWrapper">
+      <div className="input-wrapper">
         <label htmlFor="username">Username</label>
         <InputEditName
           className="username"
@@ -72,7 +72,7 @@ export default function FormLogin() {
           }}
         />
       </div>
-      <div className="inputWrapper">
+      <div className="input-wrapper">
         <label htmlFor="password">Password</label>
         <InputEditName
           className="password"
@@ -84,7 +84,7 @@ export default function FormLogin() {
           }}
         />
       </div>
-      <div className="inputRemember">
+      <div className="input-remember">
         <input
           type="checkbox"
           id="remember-me"
@@ -96,7 +96,7 @@ export default function FormLogin() {
         <label htmlFor="remember-me">Remember me</label>
       </div>
       <span className="errorMessage">{errorMessage}</span>
-      <ButtonEditName className="signInButton" text="Sign In" />
+      <ButtonEditName className="sign-in-button" text="Sign In" />
     </form>
   );
 }
