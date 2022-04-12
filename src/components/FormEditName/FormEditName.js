@@ -23,7 +23,6 @@ const FormEditName = (props) => {
       if (response.status !== 200) {
         return setErrorMessage("Error user : " + response.statusText);
       }
-      console.log(response);
       dispatch(setUser(response.body));
       setFirstName(response.body.firstName);
       setLastName(response.body.lastName);
@@ -40,9 +39,6 @@ const FormEditName = (props) => {
       lastName,
       props.token
     );
-    console.log(firstName);
-    console.log(lastName);
-    console.log(response);
 
     if (response.status !== 200) {
       return setErrorMessage("Error updating user : " + response.statusText);
