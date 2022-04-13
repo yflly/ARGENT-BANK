@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import ApiProvider from "../../Api/Api";
-//import { Navigate } from "react-router";
-//import { setEmail, setToken } from "../../utils/reducers";
 import "./FormLogin.css";
 import { setToken } from "../../utils/reducers";
 import InputEditName from "../InputEditName/InputEditName";
