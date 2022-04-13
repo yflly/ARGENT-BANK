@@ -2,7 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+  padding: 5px 5px;
+}
+
+@media (min-width: 920px) {
+  .main-nav {
+    padding: 5px 20px;
+  }
 }
 
 .main-nav a {
@@ -20,10 +26,15 @@
 }
 
 .main-nav-item {
-  /*text-decoration: none;*/
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media (min-width: 920px) {
+  .main-nav-item {
+    margin-right: 0.5rem;
+  }
 }
 
 .main-nav-logo {
@@ -38,5 +49,12 @@
 
 .fa-user-circle,
 .fa-sign-out {
-  padding-right: 7px;
+  padding-right: 2px;
+}
+
+@media (min-width: 920px) {
+  .fa-user-circle,
+  .fa-sign-out {
+    padding-right: 7px;
+  }
 }
