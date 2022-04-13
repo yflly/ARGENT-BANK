@@ -27,7 +27,7 @@ export default function FormLogin() {
       password,
       remember
     );
-    console.log(response);
+
     if (remember) {
       localStorage.setItem(
         "rememberUser",
