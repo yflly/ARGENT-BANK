@@ -4,6 +4,8 @@
 
 A React app for managing a user Bank Account
 
+![The picture](./AB.png "picture")
+
 ## Dependencies
 
 - [Node.js (v14.17.1)](https://nodejs.org/en/)
